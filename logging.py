@@ -345,7 +345,42 @@ logger.log_entry(entry2)
 logger.print_table()
 
 
+/*This example defines a TableLogger class with methods for logging entries and querying logs based on certain criteria. You can customize the entry structure and queries based on your specific needs.
+
+Make sure to replace 'local_logs.json' with the path to your desired NoSQL table file.*/
 
 
+from tinydb import TinyDB, Query
 
+class TableLogger:
+    def __init__(self, table_file):
+        self.db = TinyDB(table_file)
+        self.table = self.db.table('logs')
+
+    def log_entry(self, entry):
+        self.table.insert(entry)
+
+    def query_logs(self, query):
+        return self.table.search(query)
+
+# Example usage
+if __name__ == "__main__":
+    logger = TableLogger('local_logs.json')
+
+    entry = {
+        'subscription_id': '123',
+        'subscription_name': 'Example Subscription',
+        'Request_name': 'Example Request',
+        'Request_time': '2023-01-01T12:00:00',
+        'status': True,
+        'spn': {'spn_id': '456', 'spn_name': 'Example SPN'},
+        'task': {}
+    }
+
+    logger.log_entry(entry)
+
+    # Example query
+    result = logger.query_logs(Query().subscription_id == '123')
+    print("Query Result:")
+    print(result)
 
