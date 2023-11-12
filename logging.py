@@ -230,3 +230,122 @@ if __name__ == "__main__":
     logger.log_data(log_data)
 
 
+/*This code uses the PrettyTable library to create a table with the specified column names and adds the subscription data to the table. The logging module is then used to log the table to a file named "subscription_manager.log". Adjust the code according to your needs and add more subscription data as required.*/
+
+import logging
+from prettytable import PrettyTable
+
+# Configure the logger
+logging.basicConfig(filename='subscription_manager.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+def log_subscription_table(subscription_data):
+    # Create a PrettyTable object
+    table = PrettyTable()
+    
+    # Define table columns
+    table.field_names = ["Subscription ID", "Subscription Name", "Request Name", "Request Time", "Status", "SPN ID", "SPN Name"]
+    
+    # Add data to the table
+    for subscription in subscription_data:
+        spn = subscription.get("spn", {})
+        table.add_row([
+            subscription.get("subscription_id", ""),
+            subscription.get("subscription_name", ""),
+            subscription.get("Request_name", ""),
+            subscription.get("Request_time", ""),
+            subscription.get("status", ""),
+            spn.get("spn_id", ""),
+            spn.get("spn_name", "")
+        ])
+
+    # Log the table
+    logging.info("\n" + str(table))
+
+# Example usage:
+if __name__ == "__main__":
+    # Sample subscription data
+    subscriptions = [
+        {
+            "subscription_id": "123",
+            "subscription_name": "Subscription 1",
+            "Request_name": "Cancellation Request 1",
+            "Request_time": "2023-01-01 12:00:00",
+            "status": True,
+            "spn": {"spn_id": "456", "spn_name": "Service Principal 1"},
+            "task": {},
+        },
+        # Add more subscription data as needed
+    ]
+
+    # Log the subscription table
+    log_subscription_table(subscriptions)
+
+
+/*This code initializes a Logger class that can log entries to a JSON file and print the entries in a pretty table format. The print_table method reads the entries from the log file and formats them into rows of a PrettyTable for better readability.*/
+
+
+import json
+from prettytable import PrettyTable
+
+class Logger:
+    def __init__(self, file_path):
+        self.file_path = file_path
+
+    def log_entry(self, entry):
+        with open(self.file_path, 'a') as file:
+            json.dump(entry, file)
+            file.write('\n')
+
+    def print_table(self):
+        table = PrettyTable()
+        table.field_names = ["Subscription ID", "Subscription Name", "Request Name", "Request Time", "Status", "SPN ID", "SPN Name", "Task"]
+
+        with open(self.file_path, 'r') as file:
+            for line in file:
+                entry = json.loads(line)
+                subscription_id = entry.get("subscription_id", "")
+                subscription_name = entry.get("subscription_name", "")
+                request_name = entry.get("Request_name", "")
+                request_time = entry.get("Request_time", "")
+                status = "Success" if entry.get("status", False) else "Failure"
+                spn_id = entry.get("spn", {}).get("spn_id", "")
+                spn_name = entry.get("spn", {}).get("spn_name", "")
+                task = json.dumps(entry.get("task", {}))
+
+                table.add_row([subscription_id, subscription_name, request_name, request_time, status, spn_id, spn_name, task])
+
+        print(table)
+
+# Example Usage
+logger = Logger("log_file.json")
+
+entry1 = {
+    "subscription_id": "12345",
+    "subscription_name": "Example Subscription",
+    "Request_name": "Example Request",
+    "Request_time": "2023-11-13T12:00:00",
+    "status": True,
+    "spn": {"spn_id": "5678", "spn_name": "Example SPN"},
+    "task": {"task_id": 1, "task_name": "Example Task"}
+}
+
+entry2 = {
+    "subscription_id": "67890",
+    "subscription_name": "Another Subscription",
+    "Request_name": "Another Request",
+    "Request_time": "2023-11-14T08:30:00",
+    "status": False,
+    "spn": {"spn_id": "9876", "spn_name": "Another SPN"},
+    "task": {"task_id": 2, "task_name": "Another Task"}
+}
+
+logger.log_entry(entry1)
+logger.log_entry(entry2)
+
+logger.print_table()
+
+
+
+
+
+
