@@ -356,3 +356,88 @@ Microsoft.Network/applicationGateways/wafConfig/exclusions/list: List exclusions
 Microsoft.Network/applicationGateways/wafConfig/fileUploadLimitRules/read: Read file upload limit rules for a WAF configuration in an Azure Application Gateway.
 Microsoft.Network/applicationGateways/wafConfig/fileUploadLimitRules/list: List file upload limit rules for a WAF configuration in an Azure Application Gateway.
 
+
+Microsoft.Network/applicationGateways/wafConfig/manageRuleGroups/read: Read managed rule groups for a WAF configuration in an Azure Application Gateway.
+Microsoft.Network/applicationGateways/wafConfig/manageRuleGroups/list: List managed rule groups for a WAF configuration in an Azure Application Gateway.
+Microsoft.Network/privateDnsZones/A/recordSets/write: Create or update A record sets in an Azure Private DNS zone.
+Microsoft.Network/privateDnsZones/A/recordSets/delete: Delete A record sets from an Azure Private DNS zone.
+Microsoft.Network/privateDnsZones/CNAME/recordSets/write: Create or update CNAME record sets in an Azure Private DNS zone.
+Microsoft.Network/privateDnsZones/CNAME/recordSets/delete: Delete CNAME record sets from an Azure Private DNS zone.
+Microsoft.Network/privateDnsZones/MX/recordSets/write: Create or update MX record sets in an Azure Private DNS zone.
+Microsoft.Network/privateDnsZones/MX/recordSets/delete: Delete MX record sets from an Azure Private DNS zone.
+Microsoft.Network/privateDnsZones/PTR/recordSets/write: Create or update PTR record sets in an Azure Private DNS zone.
+Microsoft.Network/privateDnsZones/PTR/recordSets/delete: Delete PTR record sets from an Azure Private DNS zone.
+Microsoft.Network/privateDnsZones/SOA/recordSets/write: Create or update SOA record sets in an Azure Private DNS zone.
+Microsoft.Network/privateDnsZones/SOA/recordSets/delete: Delete SOA record sets from an Azure Private DNS zone.
+Microsoft.Network/privateDnsZones/SRV/recordSets/write: Create or update SRV record sets in an Azure Private DNS zone.
+Microsoft.Network/privateDnsZones/SRV/recordSets/delete: Delete SRV record sets from an Azure Private DNS zone.
+Microsoft.Network/privateDnsZones/TXT/recordSets/write: Create or update TXT record sets in an Azure Private DNS zone.
+Microsoft.Network/privateDnsZones/TXT/recordSets/delete: Delete TXT record sets from an Azure Private DNS zone.
+Microsoft.Network/privateDnsZones/A/recordSets/replace: Replace A record sets in an Azure Private DNS zone.
+Microsoft.Network/privateDnsZones/CNAME/recordSets/replace: Replace CNAME record sets in an Azure Private DNS zone.
+Microsoft.Network/privateDnsZones/MX/recordSets/replace: Replace MX record sets in an Azure Private DNS zone.
+Microsoft.Network/privateDnsZones/PTR/recordSets/replace: Replace PTR record sets in an Azure Private DNS zone.
+Microsoft.Network/privateDnsZones/SOA/recordSets/replace: Replace SOA record sets in an Azure Private DNS zone.
+Microsoft.Network/privateDnsZones/SRV/recordSets/replace: Replace SRV record sets in an Azure Private DNS zone.
+Microsoft.Network/privateDnsZones/TXT/recordSets/replace: Replace TXT record sets in an Azure Private DNS zone.
+Microsoft.Network/privateDnsZones/A/recordSets/deleteEmpty: Delete empty A record sets from an Azure Private DNS zone.
+Microsoft.Network/privateDnsZones/CNAME/recordSets/deleteEmpty: Delete empty CNAME record sets from an Azure Private DNS zone.
+Microsoft.Network/privateDnsZones/MX/recordSets/deleteEmpty: Delete empty MX record sets from an Azure Private DNS zone.
+Microsoft.Network/privateDnsZones/PTR/recordSets/deleteEmpty: Delete empty PTR record sets from an Azure Private DNS zone.
+Microsoft.Network/privateDnsZones/SOA/recordSets/deleteEmpty: Delete empty SOA record sets from an Azure Private DNS zone.
+Microsoft.Network/privateDnsZones/SRV/recordSets/deleteEmpty: Delete empty SRV record sets from an Azure Private DNS zone.
+Microsoft.Network/privateDnsZones/TXT/recordSets/deleteEmpty: Delete empty TXT record sets from an Azure Private DNS zone.
+
+
+Microsoft.Network/vpnSites/tags/write: Create or update tags for a VPN site in Azure.
+Microsoft.Network/vpnSites/tags/delete: Delete tags for a VPN site in Azure.
+Microsoft.Network/applicationGateways/firewallPolicies/write: Create or update a firewall policy for an Azure Application Gateway.
+Microsoft.Network/applicationGateways/firewallPolicies/delete: Delete a firewall policy for an Azure Application Gateway.
+Microsoft.Network/applicationGateways/wafConfig/managedRulesetAssociations/write: Create or update managed ruleset associations for a WAF configuration in an Azure Application Gateway.
+Microsoft.Network/applicationGateways/wafConfig/managedRulesetAssociations/delete: Delete managed ruleset associations for a WAF configuration in an Azure Application Gateway.
+Microsoft.Network/applicationGateways/wafConfig/customRuleGroups/customRules/write: Create or update custom rules for custom rule groups in a WAF configuration in an Azure Application Gateway.
+Microsoft.Network/applicationGateways/wafConfig/customRuleGroups/customRules/delete: Delete custom rules for custom rule groups in a WAF configuration in an Azure Application Gateway.
+Microsoft.Network/applicationGateways/wafConfig/customRuleGroups/customRules/replace: Replace custom rules for custom rule groups in a WAF configuration in an Azure Application Gateway.
+Microsoft.Network/applicationGateways/wafConfig/managedRuleGroups/managedRules/write: Create or update managed rules for managed rule groups in a WAF configuration in an Azure Application Gateway.
+Microsoft.Network/applicationGateways/wafConfig/managedRuleGroups/managedRules/delete: Delete managed rules for managed rule groups in a WAF configuration in an Azure Application Gateway.
+Microsoft.Network/applicationGateways/wafConfig/managedRuleGroups/managedRules/replace: Replace managed rules for managed rule groups in a WAF configuration in an Azure Application Gateway.
+Microsoft.Network/applicationGateways/firewallPolicies/customRuleGroups/customRules/write: Create or update custom rules for custom rule groups in a firewall policy for an Azure Application Gateway.
+Microsoft.Network/applicationGateways/firewallPolicies/customRuleGroups/customRules/delete: Delete custom rules for custom rule groups in a firewall policy for an Azure Application Gateway.
+Microsoft.Network/applicationGateways/firewallPolicies/customRuleGroups/customRules/replace: Replace custom rules for custom rule groups in a firewall policy for an Azure Application Gateway.
+Microsoft.Network/applicationGateways/firewallPolicies/managedRuleGroups/managedRules/write: Create or update managed rules for managed rule groups in a firewall policy for an Azure Application Gateway.
+Microsoft.Network/applicationGateways/firewallPolicies/managedRuleGroups/managedRules/delete: Delete managed rules for managed rule groups in a firewall policy for an Azure Application Gateway.
+Microsoft.Network/applicationGateways/firewallPolicies/managedRuleGroups/managedRules/replace: Replace managed rules for managed rule groups in a firewall policy for an Azure Application Gateway.
+Microsoft.Network/applicationGateways/backendHttpSettingsCollection/generateKey/certificate/: Generate a backend HTTP settings collection key for a certificate in an Azure Application Gateway.
+Microsoft.Network/applicationGateways/backendHttpSettingsCollection/generateKey/public/: Generate a backend HTTP settings collection key for a public certificate in an Azure Application Gateway.
+Microsoft.Network/virtualNetworkGateways/learn/: Learn about virtual network gateways in Azure.
+Microsoft.Network/virtualNetworkGateways/generatevpnclientpackage/validate/request/: Validate a request for generating a VPN client package for a virtual network gateway in Azure.
+Microsoft.Network/virtualNetworkGateways/generatevpnclientpackage/validate/response/: Validate a response for generating a VPN client package for a virtual network gateway in Azure.
+Microsoft.Network/virtualNetworkGateways/reset/: Reset a virtual network gateway in Azure.
+Microsoft.Network/virtualNetworkGateways/vpnnatpolicy/: Get the NAT policy for a virtual network gateway in Azure.
+
+Microsoft.Network/virtualNetworkGateways/routingPath/: Get the routing path for a virtual network gateway in Azure.
+Microsoft.Network/virtualNetworkGateways/vpnProfilePackage/: Get the VPN profile package for a virtual network gateway in Azure.
+Microsoft.Network/virtualNetworkGateways/vpnProfileServer/: Get the VPN profile server for a virtual network gateway in Azure.
+Microsoft.Network/virtualNetworkGateways/vpnDeviceConfiguration/: Get the VPN device configuration for a virtual network gateway in Azure.
+Microsoft.Network/virtualNetworkGateways/ipsecParameters/: Get the IPsec parameters for a virtual network gateway in Azure.
+Microsoft.Network/virtualNetworkGateways/supportedVpnDevices/: Get the supported VPN devices for a virtual network gateway in Azure.
+Microsoft.Network/virtualNetworkGateways/information/: Get information about a virtual network gateway in Azure.
+Microsoft.Network/virtualNetworkGateways/vpnProfile/server/: Get the VPN profile server for a virtual network gateway in Azure.
+Microsoft.Network/virtualNetworkGateways/getVpnProfilePackageURL/: Get the VPN profile package URL for a virtual network gateway in Azure.
+Microsoft.Network/virtualNetworkGateways/getVpnProfileServerURL/: Get the VPN profile server URL for a virtual network gateway in Azure.
+Microsoft.Network/virtualNetworkGateways/getDeviceConfigurationScript/: Get the device configuration script for a virtual network gateway in Azure.
+Microsoft.Network/virtualNetworkGateways/createVpnProfilePackage/: Create a VPN profile package for a virtual network gateway in Azure.
+Microsoft.Network/virtualNetworkGateways/createVpnProfileServer/: Create a VPN profile server for a virtual network gateway in Azure.
+Microsoft.Network/virtualNetworkGateways/generatevpnclientpackage/request/: Generate a request for a VPN client package for a virtual network gateway in Azure.
+Microsoft.Network/virtualNetworkGateways/generatevpnclientpackage/response/: Generate a response for a VPN client package for a virtual network gateway in Azure.
+Microsoft.Network/virtualNetworkGateways/generatevpnclientpackage/validate/response/: Validate a response for generating a VPN client package for a virtual network gateway in Azure.
+Microsoft.Network/virtualNetworkGateways/vpnDeviceConfiguration/validate/: Validate a VPN device configuration for a virtual network gateway in Azure.
+Microsoft.Network/virtualNetworkGateways/supportedVpnDevices/validate/: Validate supported VPN devices for a virtual network gateway in Azure.
+Microsoft.Network/virtualNetworkGateways/information/validate/: Validate information about a virtual network gateway in Azure.
+Microsoft.Network/virtualNetworkGateways/ipsecParameters/validate/: Validate IPsec parameters for a virtual network gateway in Azure.
+Microsoft.Network/virtualNetworkGateways/routingPath/validate/: Validate the routing path for a virtual network gateway in Azure.
+Microsoft.Network/virtualNetworkGateways/vpnProfilePackage/validate/: Validate a VPN profile package for a virtual network gateway in Azure.
+Microsoft.Network/virtualNetworkGateways/vpnProfileServer/validate/: Validate a VPN profile server for a virtual network gateway in Azure.
+Microsoft.Network/virtualNetworkGateways/getVpnProfilePackageURL/validate/: Validate the VPN profile package URL for a virtual network gateway in Azure.
+Microsoft.Network/virtualNetworkGateways/getVpnProfileServerURL/validate/: Validate the VPN profile server URL for a virtual network gateway in Azure.
+
