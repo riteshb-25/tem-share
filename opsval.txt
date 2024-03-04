@@ -1,0 +1,358 @@
+Microsoft.Compute/virtualMachines/write: Creating or updating a virtual machine.
+Microsoft.Network/networkInterfaces/write: Creating or updating a network interface.
+Microsoft.Storage/storageAccounts/write: Creating or updating a storage account.
+Microsoft.Web/sites/write: Creating or updating a web app.
+Microsoft.Sql/servers/databases/write: Creating or updating a SQL database.
+Microsoft.Network/publicIPAddresses/write: Creating or updating a public IP address.
+Microsoft.Authorization/roleAssignments/write: Assigning a role to a user, group, or service principal.
+Microsoft.Network/virtualNetworks/write: Creating or updating a virtual network.
+Microsoft.KeyVault/vaults/write: Creating or updating a Key Vault.
+Microsoft.Resources/deployments/write: Deploying a resource group deployment.
+Microsoft.Network/applicationGateways/write: Creating or updating an application gateway.
+Microsoft.Compute/disks/write: Creating or updating a disk.
+Microsoft.DBforPostgreSQL/servers/write: Creating or updating a PostgreSQL database server.
+Microsoft.Network/loadBalancers/write: Creating or updating a load balancer.
+Microsoft.Network/connections/write: Creating or updating a virtual network connection.
+Microsoft.DBforMySQL/servers/write: Creating or updating a MySQL database server.
+Microsoft.Network/virtualNetworkGateways/write: Creating or updating a virtual network gateway.
+
+Microsoft.Compute/virtualMachines/write: Creating or updating a virtual machine.
+Microsoft.Network/networkSecurityGroups/write: Creating or updating a network security group.
+Microsoft.Storage/storageAccounts/write: Creating or updating a storage account.
+Microsoft.Web/sites/write: Creating or updating a web app.
+Microsoft.Authorization/roleAssignments/write: Assigning a role to a user or group.
+Microsoft.Sql/servers/databases/write: Creating or updating a SQL database.
+Microsoft.KeyVault/vaults/secrets/write: Creating or updating a secret in Azure Key Vault.
+Microsoft.ContainerRegistry/registries/write: Creating or updating a container registry.
+Microsoft.Network/publicIPAddresses/write: Creating or updating a public IP address.
+Microsoft.Network/virtualNetworks/write: Creating or updating a virtual network.
+
+
+Microsoft.Compute/virtualMachines/write: Create or update a virtual machine.
+Microsoft.Compute/virtualMachines/delete: Delete a virtual machine.
+Microsoft.Network/networkSecurityGroups/write: Create or update a network security group.
+Microsoft.Network/networkSecurityGroups/delete: Delete a network security group.
+Microsoft.Storage/storageAccounts/write: Create or update a storage account.
+Microsoft.Storage/storageAccounts/delete: Delete a storage account.
+Microsoft.Web/sites/write: Create or update a web app.
+Microsoft.Web/sites/delete: Delete a web app.
+Microsoft.Authorization/roleAssignments/write: Assign a role to a user or group.
+Microsoft.Authorization/roleAssignments/delete: Remove a role assignment.
+Microsoft.Sql/servers/databases/write: Create or update a SQL database.
+Microsoft.Sql/servers/databases/delete: Delete a SQL database.
+Microsoft.KeyVault/vaults/secrets/write: Create or update a secret in Azure Key Vault.
+Microsoft.KeyVault/vaults/secrets/delete: Delete a secret from Azure Key Vault.
+Microsoft.ContainerRegistry/registries/write: Create or update a container registry.
+Microsoft.ContainerRegistry/registries/delete: Delete a container registry.
+Microsoft.Network/publicIPAddresses/write: Create or update a public IP address.
+Microsoft.Network/publicIPAddresses/delete: Delete a public IP address.
+Microsoft.Network/virtualNetworks/write: Create or update a virtual network.
+Microsoft.Network/virtualNetworks/delete: Delete a virtual network.
+Microsoft.Network/loadBalancers/write: Create or update a load balancer.
+Microsoft.Network/loadBalancers/delete: Delete a load balancer.
+Microsoft.Compute/disks/write: Create or update a virtual machine disk.
+Microsoft.Compute/disks/delete: Delete a virtual machine disk.
+Microsoft.Compute/images/write: Create or update a virtual machine image.
+Microsoft.Compute/images/delete: Delete a virtual machine image.
+Microsoft.Network/applicationGateways/write: Create or update an application gateway.
+Microsoft.Network/applicationGateways/delete: Delete an application gateway.
+Microsoft.Network/routeTables/write: Create or update a route table.
+Microsoft.Network/routeTables/delete: Delete a route table.
+Microsoft.Network/expressRouteCircuits/write: Create or update an ExpressRoute circuit.
+Microsoft.Network/expressRouteCircuits/delete: Delete an ExpressRoute circuit.
+Microsoft.Network/virtualNetworkGateways/write: Create or update a virtual network gateway.
+Microsoft.Network/virtualNetworkGateways/delete: Delete a virtual network gateway.
+Microsoft.Network/localNetworkGateways/write: Create or update a local network gateway.
+Microsoft.Network/localNetworkGateways/delete: Delete a local network gateway.
+Microsoft.Network/publicIPPrefixes/write: Create or update a public IP prefix.
+Microsoft.Network/publicIPPrefixes/delete: Delete a public IP prefix.
+Microsoft.Network/virtualNetworks/subnets/write: Create or update a subnet within a virtual network.
+Microsoft.Network/virtualNetworks/subnets/delete: Delete a subnet within a virtual network.
+Microsoft.Network/applicationGateways/firewallPolicies/write: Create or update an application gateway firewall policy.
+Microsoft.Network/applicationGateways/firewallPolicies/delete: Delete an application gateway firewall policy.
+Microsoft.Network/applicationGateways/wafConfig/write: Create or update a web application firewall (WAF) configuration for an application gateway.
+Microsoft.Network/applicationGateways/wafConfig/delete: Delete a web application firewall (WAF) configuration for an application gateway.
+Microsoft.Compute/virtualMachineScaleSets/write: Create or update a virtual machine scale set.
+Microsoft.Compute/virtualMachineScaleSets/delete: Delete a virtual machine scale set.
+Microsoft.Compute/virtualMachineScaleSets/virtualMachines/write: Create or update a virtual machine within a scale set.
+Microsoft.Compute/virtualMachineScaleSets/virtualMachines/delete: Delete a virtual machine within a scale set.
+Microsoft.Compute/availabilitySets/write: Create or update an availability set.
+Microsoft.Compute/availabilitySets/delete: Delete an availability set.
+Microsoft.ContainerService/managedClusters/write: Create or update an Azure Kubernetes Service (AKS) cluster.
+Microsoft.ContainerService/managedClusters/delete: Delete an Azure Kubernetes Service (AKS) cluster.
+Microsoft.Logic/workflows/write: Create or update an Azure Logic App workflow.
+Microsoft.Logic/workflows/delete: Delete an Azure Logic App workflow.
+Microsoft.EventGrid/topics/write: Create or update an Azure Event Grid topic.
+Microsoft.EventGrid/topics/delete: Delete an Azure Event Grid topic.
+Microsoft.EventGrid/domains/write: Create or update an Azure Event Grid domain.
+Microsoft.EventGrid/domains/delete: Delete an Azure Event Grid domain.
+Microsoft.AppPlatform/Spring/write: Create or update an Azure Spring Cloud service instance.
+Microsoft.AppPlatform/Spring/delete: Delete an Azure Spring Cloud service instance.
+Microsoft.Cache/redis/write: Create or update an Azure Cache for Redis instance.
+Microsoft.Cache/redis/delete: Delete an Azure Cache for Redis instance.
+Microsoft.ApiManagement/service/write: Create or update an Azure API Management service.
+Microsoft.ApiManagement/service/delete: Delete an Azure API Management service.
+Microsoft.DBforMySQL/servers/write: Create or update an Azure Database for MySQL server.
+Microsoft.DBforMySQL/servers/delete: Delete an Azure Database for MySQL server.
+Microsoft.DBforPostgreSQL/servers/write: Create or update an Azure Database for PostgreSQL server.
+Microsoft.DBforPostgreSQL/servers/delete: Delete an Azure Database for PostgreSQL server.
+Microsoft.ContainerRegistry/registries/webhooks/write: Create or update a webhook for an Azure Container Registry.
+Microsoft.ContainerRegistry/registries/webhooks/delete: Delete a webhook for an Azure Container Registry.
+Microsoft.Network/privateDnsZones/write: Create or update an Azure Private DNS zone.
+Microsoft.Network/privateDnsZones/delete: Delete an Azure Private DNS zone.
+Microsoft.Network/networkWatchers/write: Create or update an Azure Network Watcher.
+Microsoft.Network/networkWatchers/delete: Delete an Azure Network Watcher.
+Microsoft.Network/applicationGateways/httpListeners/write: Create or update an HTTP listener for an application gateway.
+Microsoft.Network/applicationGateways/httpListeners/delete: Delete an HTTP listener for an application gateway.
+Microsoft.Network/applicationGateways/sslCertificates/write: Create or update an SSL certificate for an application gateway.
+Microsoft.Network/applicationGateways/sslCertificates/delete: Delete an SSL certificate for an application gateway.
+Microsoft.Network/applicationGateways/urlPathMaps/write: Create or update a URL path map for an application gateway.
+Microsoft.Network/applicationGateways/urlPathMaps/delete: Delete a URL path map for an application gateway.
+Microsoft.Network/vpnGateways/write: Create or update an Azure VPN Gateway.
+Microsoft.Network/vpnGateways/delete: Delete an Azure VPN Gateway.
+Microsoft.Network/vpnConnections/write: Create or update an Azure VPN connection.
+Microsoft.Network/vpnConnections/delete: Delete an Azure VPN connection.
+Microsoft.Network/publicIPPrefixes/write: Create or update a public IP prefix.
+Microsoft.Network/publicIPPrefixes/delete: Delete a public IP prefix.
+Microsoft.Network/virtualNetworks/usages/read: Read virtual network usage information.
+Microsoft.Network/virtualNetworks/usages/list: List virtual network usage information.
+Microsoft.Network/routeTables/associatedSubnets: Get associated subnets for a route table.
+Microsoft.Network/routeTables/removeSubnet: Remove a subnet association from a route table.
+Microsoft.CognitiveServices/accounts/write: Create or update an Azure Cognitive Services account.
+Microsoft.CognitiveServices/accounts/delete: Delete an Azure Cognitive Services account.
+Microsoft.SignalRService/SignalR/write: Create or update an Azure SignalR Service.
+Microsoft.SignalRService/SignalR/delete: Delete an Azure SignalR Service.
+Microsoft.MixedReality/remoteRenderingAccounts/write: Create or update an Azure Remote Rendering account.
+Microsoft.MixedReality/remoteRenderingAccounts/delete: Delete an Azure Remote Rendering account.
+Microsoft.Cache/redis/firewallRules/write: Create or update a firewall rule for an Azure Cache for Redis instance.
+Microsoft.Cache/redis/firewallRules/delete: Delete a firewall rule for an Azure Cache for Redis instance.
+Microsoft.Compute/galleries/write: Create or update an Azure Shared Image Gallery.
+Microsoft.Compute/galleries/delete: Delete an Azure Shared Image Gallery.
+Microsoft.Compute/galleries/images/write: Create or update an image in an Azure Shared Image Gallery.
+Microsoft.Compute/galleries/images/delete: Delete an image from an Azure Shared Image Gallery.
+Microsoft.Compute/galleries/images/versions/write: Create or update a version for an image in an Azure Shared Image Gallery.
+Microsoft.Compute/galleries/images/versions/delete: Delete a version of an image from an Azure Shared Image Gallery.
+Microsoft.Web/connectionGateways/write: Create or update an Azure App Service Connection Gateway.
+Microsoft.Web/connectionGateways/delete: Delete an Azure App Service Connection Gateway.
+Microsoft.Web/connections/write: Create or update an Azure App Service connection.
+Microsoft.Web/connections/delete: Delete an Azure App Service connection.
+Microsoft.Web/deployments/write: Create or update a deployment for an Azure App Service.
+Microsoft.Web/deployments/delete: Delete a deployment for an Azure App Service.
+Microsoft.Logic/workflows/triggers/write: Create or update a trigger for an Azure Logic App workflow.
+Microsoft.Logic/workflows/triggers/delete: Delete a trigger for an Azure Logic App workflow.
+Microsoft.Logic/workflows/actions/write: Create or update an action for an Azure Logic App workflow.
+Microsoft.Logic/workflows/actions/delete: Delete an action for an Azure Logic App workflow.
+Microsoft.Logic/integrationServiceEnvironments/write: Create or update an Azure Logic Apps Integration Service Environment.
+Microsoft.Logic/integrationServiceEnvironments/delete: Delete an Azure Logic Apps Integration Service Environment.
+Microsoft.NotificationHubs/namespaces/write: Create or update an Azure Notification Hub namespace.
+Microsoft.NotificationHubs/namespaces/delete: Delete an Azure Notification Hub namespace.
+Microsoft.NotificationHubs/namespaces/authorizationRules/write: Create or update an authorization rule for an Azure Notification Hub namespace.
+Microsoft.NotificationHubs/namespaces/authorizationRules/delete: Delete an authorization rule for an Azure Notification Hub namespace.
+Microsoft.NotificationHubs/namespaces/notificationHubs/write: Create or update an Azure Notification Hub within a namespace.
+Microsoft.NotificationHubs/namespaces/notificationHubs/delete: Delete an Azure Notification Hub within a namespace.
+Microsoft.Network/firewallPolicies/write: Create or update an Azure Firewall Policy.
+Microsoft.Network/firewallPolicies/delete: Delete an Azure Firewall Policy.
+Microsoft.Network/firewalls/write: Create or update an Azure Firewall.
+Microsoft.Network/firewalls/delete: Delete an Azure Firewall.
+Microsoft.Network/virtualWANs/write: Create or update an Azure Virtual WAN.
+Microsoft.Network/virtualWANs/delete: Delete an Azure Virtual WAN.
+Microsoft.Network/virtualWANs/hubVirtualNetworkConnections/write: Create or update a hub virtual network connection in Azure Virtual WAN.
+Microsoft.Network/virtualWANs/hubVirtualNetworkConnections/delete: Delete a hub virtual network connection in Azure Virtual WAN.
+Microsoft.Network/virtualWANs/hubVirtualNetworkConnections/modifySecurityGroups: Modify security groups for a hub virtual network connection in Azure Virtual WAN.
+Microsoft.Network/virtualWANs/siteToSiteConnections/write: Create or update a site-to-site connection in Azure Virtual WAN.
+Microsoft.Network/virtualWANs/siteToSiteConnections/delete: Delete a site-to-site connection in Azure Virtual WAN.
+Microsoft.Network/expressRouteCircuits/peerings/write: Create or update a peering for an ExpressRoute circuit.
+Microsoft.Network/expressRouteCircuits/peerings/delete: Delete a peering for an ExpressRoute circuit.
+Microsoft.Storage/storageAccounts/blobServices/containers/write: Create or update a blob container in an Azure Storage account.
+Microsoft.Storage/storageAccounts/blobServices/containers/delete: Delete a blob container in an Azure Storage account.
+Microsoft.Storage/storageAccounts/fileServices/shares/write: Create or update a file share in an Azure Storage account.
+Microsoft.Storage/storageAccounts/fileServices/shares/delete: Delete a file share in an Azure Storage account.
+Microsoft.Storage/storageAccounts/tableServices/tables/write: Create or update a table in an Azure Storage account.
+Microsoft.Storage/storageAccounts/tableServices/tables/delete: Delete a table in an Azure Storage account.
+Microsoft.Storage/storageAccounts/queueServices/queues/write: Create or update a queue in an Azure Storage account.
+Microsoft.Storage/storageAccounts/queueServices/queues/delete: Delete a queue in an Azure Storage account.
+Microsoft.DocumentDB/databaseAccounts/write: Create or update an Azure Cosmos DB account.
+Microsoft.DocumentDB/databaseAccounts/delete: Delete an Azure Cosmos DB account.
+Microsoft.DocumentDB/databaseAccounts/databases/write: Create or update a database in an Azure Cosmos DB account.
+Microsoft.DocumentDB/databaseAccounts/databases/delete: Delete a database in an Azure Cosmos DB account.
+Microsoft.DocumentDB/databaseAccounts/containers/write: Create or update a container in an Azure Cosmos DB database.
+Microsoft.DocumentDB/databaseAccounts/containers/delete: Delete a container in an Azure Cosmos DB database.
+Microsoft.Batch/batchAccounts/write: Create or update an Azure Batch account.
+Microsoft.Batch/batchAccounts/delete: Delete an Azure Batch account.
+Microsoft.Batch/batchAccounts/pools/write: Create or update a pool in an Azure Batch account.
+Microsoft.Batch/batchAccounts/pools/delete: Delete a pool in an Azure Batch account.
+Microsoft.Web/serverFarms/write: Create or update an Azure App Service Plan (Server Farm).
+Microsoft.Web/serverFarms/delete: Delete an Azure App Service Plan (Server Farm).
+Microsoft.Web/sites/slots/write: Create or update a deployment slot in an Azure App Service.
+Microsoft.Web/sites/slots/delete: Delete a deployment slot in an Azure App Service.
+Microsoft.Logic/integrationAccounts/write: Create or update an Azure Logic Apps Integration Account.
+Microsoft.Logic/integrationAccounts/delete: Delete an Azure Logic Apps Integration Account.
+Microsoft.Logic/workflows/versions/write: Create or update a version for an Azure Logic App workflow.
+
+Microsoft.Media/mediaservices/write: Create or update an Azure Media Services account.
+Microsoft.Media/mediaservices/delete: Delete an Azure Media Services account.
+Microsoft.Media/mediaservices/assets/write: Create or update a media asset in Azure Media Services.
+Microsoft.Media/mediaservices/assets/delete: Delete a media asset in Azure Media Services.
+Microsoft.Media/mediaservices/transforms/write: Create or update a transform in Azure Media Services.
+Microsoft.Media/mediaservices/transforms/delete: Delete a transform in Azure Media Services.
+Microsoft.DBforMariaDB/servers/write: Create or update an Azure Database for MariaDB server.
+Microsoft.DBforMariaDB/servers/delete: Delete an Azure Database for MariaDB server.
+Microsoft.DBforMariaDB/servers/databases/write: Create or update a database in Azure Database for MariaDB.
+Microsoft.DBforMariaDB/servers/databases/delete: Delete a database in Azure Database for MariaDB.
+Microsoft.DBforMariaDB/servers/firewallRules/write: Create or update a firewall rule for an Azure Database for MariaDB server.
+Microsoft.DBforMariaDB/servers/firewallRules/delete: Delete a firewall rule for an Azure Database for MariaDB server.
+Microsoft.DBforMySQL/servers/firewallRules/write: Create or update a firewall rule for an Azure Database for MySQL server.
+Microsoft.DBforMySQL/servers/firewallRules/delete: Delete a firewall rule for an Azure Database for MySQL server.
+Microsoft.DBforPostgreSQL/servers/firewallRules/write: Create or update a firewall rule for an Azure Database for PostgreSQL server.
+Microsoft.DBforPostgreSQL/servers/firewallRules/delete: Delete a firewall rule for an Azure Database for PostgreSQL server.
+Microsoft.Cache/redis/firewallRules/write: Create or update a firewall rule for an Azure Cache for Redis instance.
+Microsoft.Cache/redis/firewallRules/delete: Delete a firewall rule for an Azure Cache for Redis instance.
+Microsoft.ContainerRegistry/registries/webhooks/read: Read information about a webhook for an Azure Container Registry.
+Microsoft.ContainerRegistry/registries/webhooks/list: List webhooks for an Azure Container Registry.
+Microsoft.ContainerRegistry/registries/webhooks/delete: Delete a webhook for an Azure Container Registry.
+Microsoft.DataLakeStore/accounts/write: Create or update an Azure Data Lake Storage account.
+Microsoft.DataLakeStore/accounts/delete: Delete an Azure Data Lake Storage account.
+Microsoft.DataLakeStore/accounts/filesystems/write: Create or update a filesystem in Azure Data Lake Storage.
+Microsoft.DataLakeStore/accounts/filesystems/delete: Delete a filesystem in Azure Data Lake Storage.
+Microsoft.KeyVault/vaults/accessPolicies/write: Create or update an access policy for an Azure Key Vault.
+Microsoft.KeyVault/vaults/accessPolicies/delete: Delete an access policy for an Azure Key Vault.
+Microsoft.Network/networkWatchers/connectionMonitors/write: Create or update a connection monitor in Azure Network Watcher.
+Microsoft.Network/networkWatchers/connectionMonitors/delete: Delete a connection monitor in Azure Network Watcher.
+Microsoft.Network/networkWatchers/troubleshooters/write: Create or update a troubleshooter in Azure Network Watcher.
+Microsoft.Network/networkWatchers/troubleshooters/delete: Delete a troubleshooter in Azure Network Watcher.
+Microsoft.NotificationHubs/namespaces/regenerateKeys/write: Regenerate access keys for an Azure Notification Hub namespace.
+Microsoft.ServiceBus/namespaces/write: Create or update an Azure Service Bus namespace.
+Microsoft.ServiceBus/namespaces/delete: Delete an Azure Service Bus namespace.
+Microsoft.ServiceBus/namespaces/queues/write: Create or update a queue in an Azure Service Bus namespace.
+Microsoft.ServiceBus/namespaces/queues/delete: Delete a queue in an Azure Service Bus namespace.
+Microsoft.ServiceBus/namespaces/topics/write: Create or update a topic in an Azure Service Bus namespace.
+Microsoft.ServiceBus/namespaces/topics/delete: Delete a topic in an Azure Service Bus namespace.
+Microsoft.ServiceBus/namespaces/subscriptions/write: Create or update a subscription for an Azure Service Bus topic.
+Microsoft.ServiceBus/namespaces/subscriptions/delete: Delete a subscription for an Azure Service Bus topic.
+
+Microsoft.ServiceBus/namespaces/rules/write: Create or update a rule for a subscription in an Azure Service Bus topic.
+Microsoft.ServiceBus/namespaces/rules/delete: Delete a rule for a subscription in an Azure Service Bus topic.
+Microsoft.ServiceBus/namespaces/authorizationRules/write: Create or update an authorization rule for an Azure Service Bus namespace.
+Microsoft.ServiceBus/namespaces/authorizationRules/delete: Delete an authorization rule for an Azure Service Bus namespace.
+Microsoft.Storage/storageAccounts/blobServices/containers/generateSas/executeAction: Generate a Shared Access Signature (SAS) for a blob container in an Azure Storage account.
+Microsoft.Storage/storageAccounts/fileServices/shares/generateSas/executeAction: Generate a Shared Access Signature (SAS) for a file share in an Azure Storage account.
+Microsoft.Storage/storageAccounts/tableServices/tables/insertEntity: Insert an entity into a table in an Azure Storage account.
+Microsoft.Storage/storageAccounts/queueServices/queues/enqueue: Enqueue a message into a queue in an Azure Storage account.
+Microsoft.Storage/storageAccounts/queueServices/queues/dequeue: Dequeue a message from a queue in an Azure Storage account.
+Microsoft.Compute/virtualMachines/extensions/write: Create or update an extension for a virtual machine in Azure.
+Microsoft.Compute/virtualMachines/extensions/delete: Delete an extension from a virtual machine in Azure.
+Microsoft.Compute/virtualMachineScaleSets/extensions/write: Create or update an extension for a virtual machine scale set in Azure.
+Microsoft.Compute/virtualMachineScaleSets/extensions/delete: Delete an extension from a virtual machine scale set in Azure.
+Microsoft.Compute/disks/snapshots/write: Create or update a snapshot for a managed disk in Azure.
+Microsoft.Compute/disks/snapshots/delete: Delete a snapshot for a managed disk in Azure.
+Microsoft.Compute/galleries/images/snapshots/write: Create or update a snapshot for an image in an Azure Shared Image Gallery.
+Microsoft.Compute/galleries/images/snapshots/delete: Delete a snapshot for an image in an Azure Shared Image Gallery.
+Microsoft.Network/applicationGateways/backendHealth/write: Create or update the backend health for an Azure Application Gateway.
+Microsoft.Network/applicationGateways/backendHealth/delete: Delete the backend health for an Azure Application Gateway.
+Microsoft.Network/applicationGateways/cache/write: Create or update cache settings for an Azure Application Gateway.
+Microsoft.Network/applicationGateways/cache/delete: Delete cache settings for an Azure Application Gateway.
+Microsoft.Network/applicationGateways/httpSettings/write: Create or update HTTP settings for an Azure Application Gateway.
+Microsoft.Network/applicationGateways/httpSettings/delete: Delete HTTP settings for an Azure Application Gateway.
+Microsoft.Network/applicationGateways/frontendIPConfigurations/write: Create or update frontend IP configurations for an Azure Application Gateway.
+Microsoft.Network/applicationGateways/frontendIPConfigurations/delete: Delete frontend IP configurations for an Azure Application Gateway.
+Microsoft.Network/applicationGateways/backendAddressPools/write: Create or update backend address pools for an Azure Application Gateway.
+Microsoft.Network/applicationGateways/backendAddressPools/delete: Delete backend address pools for an Azure Application Gateway.
+Microsoft.Network/applicationGateways/requestRoutingRules/write: Create or update request routing rules for an Azure Application Gateway.
+Microsoft.Network/applicationGateways/requestRoutingRules/delete: Delete request routing rules for an Azure Application Gateway.
+Microsoft.Network/expressRouteCircuits/peerings/advertisedPublicPrefixes/write: Create or update advertised public prefixes for an ExpressRoute circuit peering.
+Microsoft.Network/expressRouteCircuits/peerings/advertisedPublicPrefixes/delete: Delete advertised public prefixes for an ExpressRoute circuit peering.
+Microsoft.Network/expressRouteCircuits/peerings/authorizedCrossConnections/write: Authorize a cross-connection for an ExpressRoute circuit peering.
+Microsoft.Network/expressRouteCircuits/peerings/authorizedCrossConnections/delete: Deauthorize a cross-connection for an ExpressRoute circuit peering.
+Microsoft.Network/vpnGateways/connectionHealth/write: Update the connection health of an Azure VPN Gateway.
+Microsoft.Network/vpnGateways/connectionHealth/delete: Clear the connection health of an Azure VPN Gateway.
+Microsoft.Network/vpnGateways/routes/write: Create or update routes for an Azure VPN Gateway.
+Microsoft.Network/vpnGateways/routes/delete: Delete routes for an Azure VPN Gateway.
+Microsoft.Network/vpnGateways/connections/write: Create or update connections for an Azure VPN Gateway.
+Microsoft.Network/vpnGateways/connections/delete: Delete connections for an Azure VPN Gateway.
+Microsoft.Network/vpnGateways/ipsecPolicies/write: Create or update IPsec policies for an Azure VPN Gateway.
+Microsoft.Network/vpnGateways/ipsecPolicies/delete: Delete IPsec policies for an Azure VPN Gateway.
+Microsoft.Network/vpnGateways/bgpPeerings/write: Create or update BGP peerings for an Azure VPN Gateway.
+Microsoft.Network/vpnGateways/bgpPeerings/delete: Delete BGP peerings for an Azure VPN Gateway.
+
+Microsoft.Network/vpnGateways/connectionMonitorAssociations/write: Create or update a connection monitor association for an Azure VPN Gateway.
+Microsoft.Network/vpnGateways/connectionMonitorAssociations/delete: Delete a connection monitor association for an Azure VPN Gateway.
+Microsoft.Network/vpnGateways/p2sVpnGateways/write: Create or update a Point-to-Site VPN gateway for an Azure VPN Gateway.
+Microsoft.Network/vpnGateways/p2sVpnGateways/delete: Delete a Point-to-Site VPN gateway for an Azure VPN Gateway.
+Microsoft.Network/vpnGateways/s1sVpnGateways/write: Create or update a Site-to-Site VPN gateway for an Azure VPN Gateway.
+Microsoft.Network/vpnGateways/s1sVpnGateways/delete: Delete a Site-to-Site VPN gateway for an Azure VPN Gateway.
+Microsoft.Network/vpnGateways/vpnSites/write: Create or update a VPN site for an Azure VPN Gateway.
+Microsoft.Network/vpnGateways/vpnSites/delete: Delete a VPN site for an Azure VPN Gateway.
+Microsoft.Network/privateLinkServices/write: Create or update an Azure Private Link service.
+Microsoft.Network/privateLinkServices/delete: Delete an Azure Private Link service.
+Microsoft.Network/privateLinkServices/privateEndpointConnections/write: Create or update a private endpoint connection for an Azure Private Link service.
+Microsoft.Network/privateLinkServices/privateEndpointConnections/delete: Delete a private endpoint connection for an Azure Private Link service.
+Microsoft.Network/loadBalancers/inboundNatRules/write: Create or update an inbound NAT rule for an Azure Load Balancer.
+Microsoft.Network/loadBalancers/inboundNatRules/delete: Delete an inbound NAT rule for an Azure Load Balancer.
+Microsoft.Network/loadBalancers/probes/write: Create or update a probe for an Azure Load Balancer.
+Microsoft.Network/loadBalancers/probes/delete: Delete a probe for an Azure Load Balancer.
+Microsoft.Network/loadBalancers/backendAddressPools/write: Create or update backend address pools for an Azure Load Balancer.
+Microsoft.Network/loadBalancers/backendAddressPools/delete: Delete backend address pools for an Azure Load Balancer.
+Microsoft.Network/loadBalancers/loadBalancingRules/write: Create or update load balancing rules for an Azure Load Balancer.
+Microsoft.Network/loadBalancers/loadBalancingRules/delete: Delete load balancing rules for an Azure Load Balancer.
+Microsoft.Network/loadBalancers/outboundRules/write: Create or update outbound rules for an Azure Load Balancer.
+Microsoft.Network/loadBalancers/outboundRules/delete: Delete outbound rules for an Azure Load Balancer.
+Microsoft.Network/loadBalancers/frontendIPConfigurations/write: Create or update frontend IP configurations for an Azure Load Balancer.
+Microsoft.Network/loadBalancers/frontendIPConfigurations/delete: Delete frontend IP configurations for an Azure Load Balancer.
+Microsoft.Network/loadBalancers/backendAddressPools/backendNicIpConfigurations/write: Create or update backend NIC IP configurations for an Azure Load Balancer.
+Microsoft.Network/loadBalancers/backendAddressPools/backendNicIpConfigurations/delete: Delete backend NIC IP configurations for an Azure Load Balancer.
+Microsoft.Network/loadBalancers/inboundNatRules/inboundNatPools/write: Create or update inbound NAT pools for an Azure Load Balancer.
+Microsoft.Network/loadBalancers/inboundNatRules/inboundNatPools/delete: Delete inbound NAT pools for an Azure Load Balancer.
+Microsoft.Network/loadBalancers/frontendIPConfigurations/inboundNatPools/write: Create or update inbound NAT pools for frontend IP configurations in an Azure Load Balancer.
+Microsoft.Network/loadBalancers/frontendIPConfigurations/inboundNatPools/delete: Delete inbound NAT pools for frontend IP configurations in an Azure Load Balancer.
+Microsoft.Network/virtualNetworkGateways/connectionResetSharedKey/write: Reset the shared key for a virtual network gateway in Azure.
+Microsoft.Network/virtualNetworkGateways/generatevpnclientpackage/write: Generate a VPN client package for a virtual network gateway in Azure.
+Microsoft.Network/virtualNetworkGateways/touch/write: Trigger a touch action on a virtual network gateway in Azure.
+Microsoft.Network/networkSecurityGroups/flowLogs/write: Enable or update flow logs for a network security group in Azure.
+Microsoft.Network/networkSecurityGroups/flowLogs/delete: Disable flow logs for a network security group in Azure.
+Microsoft.Network/publicIPAddresses/tags/write: Create or update tags for a public IP address in Azure.
+Microsoft.Network/publicIPAddresses/tags/delete: Delete tags for a public IP address in Azure.
+
+
+Microsoft.Network/publicIPPrefixes/tags/write: Create or update tags for a public IP prefix in Azure.
+Microsoft.Network/publicIPPrefixes/tags/delete: Delete tags for a public IP prefix in Azure.
+Microsoft.Network/localNetworkGateways/tags/write: Create or update tags for a local network gateway in Azure.
+Microsoft.Network/localNetworkGateways/tags/delete: Delete tags for a local network gateway in Azure.
+Microsoft.Network/applicationGateways/backendHealth/httpSettings/write: Create or update HTTP settings for backend health in an Azure Application Gateway.
+Microsoft.Network/applicationGateways/backendHealth/httpSettings/delete: Delete HTTP settings for backend health in an Azure Application Gateway.
+Microsoft.Network/applicationGateways/backendHealth/backendAddressPools/write: Create or update backend address pools for backend health in an Azure Application Gateway.
+Microsoft.Network/applicationGateways/backendHealth/backendAddressPools/delete: Delete backend address pools for backend health in an Azure Application Gateway.
+Microsoft.Network/applicationGateways/backendHealth/loadBalancingRules/write: Create or update load balancing rules for backend health in an Azure Application Gateway.
+Microsoft.Network/applicationGateways/backendHealth/loadBalancingRules/delete: Delete load balancing rules for backend health in an Azure Application Gateway.
+Microsoft.Network/applicationGateways/backendHealth/probes/write: Create or update probes for backend health in an Azure Application Gateway.
+Microsoft.Network/applicationGateways/backendHealth/probes/delete: Delete probes for backend health in an Azure Application Gateway.
+Microsoft.Network/applicationGateways/backendHealth/backendInstanceHealth/write: Create or update backend instance health for an Azure Application Gateway.
+Microsoft.Network/applicationGateways/backendHealth/backendInstanceHealth/delete: Delete backend instance health for an Azure Application Gateway.
+Microsoft.Network/applicationGateways/backendHealth/reset/: Reset backend health for an Azure Application Gateway.
+Microsoft.Network/applicationGateways/wafConfig/policySettings/write: Create or update WAF policy settings for an Azure Application Gateway.
+Microsoft.Network/applicationGateways/wafConfig/policySettings/delete: Delete WAF policy settings for an Azure Application Gateway.
+Microsoft.Network/applicationGateways/wafConfig/customRules/write: Create or update custom rules for a WAF configuration in an Azure Application Gateway.
+Microsoft.Network/applicationGateways/wafConfig/customRules/delete: Delete custom rules for a WAF configuration in an Azure Application Gateway.
+Microsoft.Network/applicationGateways/wafConfig/exclusions/write: Create or update exclusions for a WAF configuration in an Azure Application Gateway.
+
+
+Microsoft.Network/applicationGateways/wafConfig/botProtection/write: Create or update bot protection settings for a WAF configuration in an Azure Application Gateway.
+Microsoft.Network/applicationGateways/wafConfig/botProtection/delete: Delete bot protection settings for a WAF configuration in an Azure Application Gateway.
+Microsoft.Network/applicationGateways/wafConfig/customRuleGroups/write: Create or update custom rule groups for a WAF configuration in an Azure Application Gateway.
+Microsoft.Network/applicationGateways/wafConfig/customRuleGroups/delete: Delete custom rule groups for a WAF configuration in an Azure Application Gateway.
+Microsoft.Network/applicationGateways/wafConfig/exclusions/write: Create or update exclusions for a WAF configuration in an Azure Application Gateway.
+Microsoft.Network/applicationGateways/wafConfig/exclusions/delete: Delete exclusions for a WAF configuration in an Azure Application Gateway.
+Microsoft.Network/applicationGateways/wafConfig/fileUploadLimitRules/write: Create or update file upload limit rules for a WAF configuration in an Azure Application Gateway.
+Microsoft.Network/applicationGateways/wafConfig/fileUploadLimitRules/delete: Delete file upload limit rules for a WAF configuration in an Azure Application Gateway.
+Microsoft.Network/applicationGateways/wafConfig/manageRuleGroups/write: Create or update managed rule groups for a WAF configuration in an Azure Application Gateway.
+Microsoft.Network/applicationGateways/wafConfig/manageRuleGroups/delete: Delete managed rule groups for a WAF configuration in an Azure Application Gateway.
+Microsoft.Network/applicationGateways/wafConfig/policySettings/read: Read WAF policy settings for an Azure Application Gateway.
+Microsoft.Network/applicationGateways/wafConfig/policySettings/list: List WAF policy settings for an Azure Application Gateway.
+Microsoft.Network/applicationGateways/wafConfig/botProtection/read: Read bot protection settings for a WAF configuration in an Azure Application Gateway.
+Microsoft.Network/applicationGateways/wafConfig/botProtection/list: List bot protection settings for a WAF configuration in an Azure Application Gateway.
+Microsoft.Network/applicationGateways/wafConfig/customRules/read: Read custom rules for a WAF configuration in an Azure Application Gateway.
+Microsoft.Network/applicationGateways/wafConfig/customRules/list: List custom rules for a WAF configuration in an Azure Application Gateway.
+Microsoft.Network/applicationGateways/wafConfig/exclusions/read: Read exclusions for a WAF configuration in an Azure Application Gateway.
+Microsoft.Network/applicationGateways/wafConfig/exclusions/list: List exclusions for a WAF configuration in an Azure Application Gateway.
+Microsoft.Network/applicationGateways/wafConfig/fileUploadLimitRules/read: Read file upload limit rules for a WAF configuration in an Azure Application Gateway.
+Microsoft.Network/applicationGateways/wafConfig/fileUploadLimitRules/list: List file upload limit rules for a WAF configuration in an Azure Application Gateway.
+
