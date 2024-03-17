@@ -48,3 +48,50 @@ Strategic Decision Support: Provide senior management with strategic insights an
 Conclusion:
 ACE AMEYA is not just a project; it's a journey towards excellence in Azure Cloud Enablement. By fostering mastery, operational excellence, and advanced insights, the project aims to position the organization as a leader in leveraging Azure cloud technologies for unparalleled success in the digital landscape.
 
+
+
+import { renderHook, act } from '@testing-library/react-hooks';
+import { useEffect } from 'react';
+import useAdfs from './useAdfs';
+
+jest.useFakeTimers();
+
+describe('useAdfs', () => {
+  it('should call refresh function at specified interval', () => {
+    const mockFetch = jest.fn();
+    global.fetch = mockFetch;
+
+    renderHook(() => useAdfs());
+    jest.advanceTimersByTime(60 * 60 * 1000); // Advance timer by 1 hour
+
+    expect(mockFetch).toHaveBeenCalledWith('/api/adfs/refresh', {
+      mode: 'no-cors',
+      credentials: 'include',
+    });
+  });
+
+  it('should log error if refresh fails', () => {
+    const consoleSpy = jest.spyOn(console, 'log').mockImplementation();
+
+    const mockFetch = jest.fn().mockRejectedValue(new Error('Fetch error'));
+    global.fetch = mockFetch;
+
+    renderHook(() => useAdfs());
+    jest.advanceTimersByTime(60 * 60 * 1000); // Advance timer by 1 hour
+
+    expect(consoleSpy).toHaveBeenCalledWith('error while refreshing page : Fetch error');
+
+    consoleSpy.mockRestore();
+  });
+
+  it('should clear interval on unmount', () => {
+    const clearIntervalSpy = jest.spyOn(window, 'clearInterval');
+
+    const { unmount } = renderHook(() => useAdfs());
+    unmount();
+
+    expect(clearIntervalSpy).toHaveBeenCalled();
+
+    clearIntervalSpy.mockRestore();
+  });
+});
