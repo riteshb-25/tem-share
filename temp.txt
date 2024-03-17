@@ -95,3 +95,45 @@ describe('useAdfs', () => {
     clearIntervalSpy.mockRestore();
   });
 });
+
+
+
+
+
+
+
+import { renderHook } from '@testing-library/react-hooks';
+import useAdfs from './useAdfs'; // Import the hook
+
+describe('useAdfs', () => {
+  beforeEach(() => {
+    jest.useFakeTimers(); // Mock timers
+  });
+
+  afterEach(() => {
+    jest.clearAllTimers(); // Clear all timers after each test
+  });
+
+  it('should call refresh function at specified interval', () => {
+    global.fetch = jest.fn().mockResolvedValue({}); // Mock the fetch function
+    const { result } = renderHook(() => useAdfs());
+
+    jest.advanceTimersByTime(60 * 60 * 1000); // Advance time by interval
+
+    expect(global.fetch).toHaveBeenCalledTimes(1);
+  });
+
+  it('should handle error while refreshing', async () => {
+    global.fetch = jest.fn().mockRejectedValue(new Error('Network error')); // Mock the fetch function
+    const consoleSpy = jest.spyOn(console, 'log').mockImplementation();
+    renderHook(() => useAdfs());
+
+    jest.advanceTimersByTime(60 * 60 * 1000); // Advance time by interval
+
+    // Wait for promise to resolve
+    await Promise.resolve();
+
+    expect(consoleSpy).toHaveBeenCalledWith('error while refreshing page : Network error');
+  });
+});
+
