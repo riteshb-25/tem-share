@@ -1,0 +1,31 @@
+import requests
+from bs4 import BeautifulSoup
+import pandas as pd
+
+# The URL from which we'll be scraping data
+url = "https://learn.microsoft.com/en-us/azure/role-based-access-control/permissions/networking"
+
+# Make a request to the website
+response = requests.get(url)
+soup = BeautifulSoup(response.text, 'html.parser')
+
+# Find all table elements
+tables = soup.findAll('table')
+
+# List to hold all the tables as DataFrame objects
+dfs = []
+
+# Loop through all found tables
+for i, table in enumerate(tables):
+    # Convert table to DataFrame
+    df = pd.read_html(str(table))[0]
+    dfs.append(df)
+    # Save the table as a CSV file (optional)
+    df.to_csv(f'table_{i+1}.csv', index=False)
+
+# You can access individual tables from the 'dfs' list
+# For example, to print the first table:
+if dfs:
+    print(dfs[0])
+else:
+    print("No tables found.")
