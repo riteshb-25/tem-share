@@ -71,3 +71,41 @@ except requests.exceptions.Timeout:
 # Catch other potential errors
 except Exception as e:
     print(f"An error occurred: {e}")
+
+
+
+import pandas as pd
+import os
+
+# Specify the path to your folder containing the CSV files
+folder_path = 'path/to/your/csv/folder'
+
+# Initialize two empty DataFrames, one for each condition
+df_with_write = pd.DataFrame()
+df_without_write = pd.DataFrame()
+
+# Loop through all files in the specified folder
+for filename in os.listdir(folder_path):
+    if filename.endswith('.csv'):  # Check if the file is a CSV
+        file_path = os.path.join(folder_path, filename)
+        # Read the CSV file
+        df = pd.read_csv(file_path)
+        
+        # Check if the first column of the current DataFrame contains 'write'
+        if 'write' in df.columns[0].lower():
+            # If it does, append it to the 'df_with_write' DataFrame
+            df_with_write = df_with_write.append(df, ignore_index=True)
+        else:
+            # If it does not, append it to the 'df_without_write' DataFrame
+            df_without_write = df_without_write.append(df, ignore_index=True)
+
+# At this point, 'df_with_write' contains all rows from all CSVs where the first column had 'write',
+# and 'df_without_write' contains all other rows.
+
+# If you want to inspect the DataFrames, you can print them or their first few rows using:
+print(df_with_write.head())
+print(df_without_write.head())
+
+# If needed, you can also save these DataFrames to new CSV files:
+df_with_write.to_csv('with_write.csv', index=False)
+df_without_write.to_csv('without_write.csv', index=False)
