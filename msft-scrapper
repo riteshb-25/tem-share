@@ -29,3 +29,45 @@ if dfs:
     print(dfs[0])
 else:
     print("No tables found.")
+
+
+
+
+import requests
+from bs4 import BeautifulSoup
+import pandas as pd
+
+url = "https://learn.microsoft.com/en-us/azure/role-based-access-control/permissions/networking"
+
+# Try to make a request to the website
+try:
+    # Increase the timeout if necessary. The default is usually around 10 seconds.
+    # Here, 'timeout' is set to 30 seconds for both the connection and the read timeouts.
+    response = requests.get(url, timeout=(30, 30))
+    
+    # Proceed only if we got a successful response
+    if response.status_code == 200:
+        soup = BeautifulSoup(response.text, 'html.parser')
+
+        tables = soup.findAll('table')
+        dfs = []
+
+        for i, table in enumerate(tables):
+            df = pd.read_html(str(table))[0]
+            dfs.append(df)
+            df.to_csv(f'table_{i+1}.csv', index=False)
+
+        if dfs:
+            print(dfs[0])
+        else:
+            print("No tables found.")
+    else:
+        print(f"Failed to retrieve the webpage. Status code: {response.status_code}")
+
+# Catch the connection timeout error
+except requests.exceptions.Timeout:
+    print("The request timed out. Please try again later or check your internet connection.")
+
+# Catch other potential errors
+except Exception as e:
+    print(f"An error occurred: {e}")
