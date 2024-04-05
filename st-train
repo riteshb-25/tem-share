@@ -1,0 +1,37 @@
+from sentence_transformers import SentenceTransformer, LoggingHandler, losses, models, util
+from sentence_transformers.evaluation import EmbeddingSimilarityEvaluator
+from sentence_transformers.readers import InputExample
+from torch.utils.data import DataLoader
+
+import logging
+import os
+
+# Set up basic logging
+logging.basicConfig(format='%(asctime)s - %(message)s',
+                    datefmt='%Y-%m-%d %H:%M:%S',
+                    level=logging.INFO,
+                    handlers=[LoggingHandler()])
+
+# Load a pre-trained model
+word_embedding_model = models.Transformer('bert-base-uncased')
+pooling_model = models.Pooling(word_embedding_model.get_word_embedding_dimension())
+model = SentenceTransformer(modules=[word_embedding_model, pooling_model])
+
+# Prepare your training data
+train_examples = [InputExample(texts=['Example sentence 1', 'Example sentence 2'], label=0.8)]
+train_dataloader = DataLoader(train_examples, shuffle=True, batch_size=16)
+
+# Define a loss function, for example, CosineSimilarityLoss
+train_loss = losses.CosineSimilarityLoss(model)
+
+# Callback function to print loss and evaluation metric during training
+def callback(score, epoch, steps):
+    print(f"Epoch: {epoch}, Steps: {steps}, Score: {score}")
+
+# Train the model
+model.fit(train_objectives=[(train_dataloader, train_loss)],
+          evaluator=EmbeddingSimilarityEvaluator.from_input_examples(train_examples, name='train-eval'),
+          epochs=1,
+          warmup_steps=100,
+          output_path=os.path.join('output', 'training_example'),
+          callback=callback)
