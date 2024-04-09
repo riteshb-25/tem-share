@@ -88,4 +88,27 @@ model.fit(
 )
 
 
+from sentence_transformers.evaluation import SentenceEvaluator
+import logging
+
+class EpochLossLoggingCallback(SentenceEvaluator):
+    def __init__(self):
+        super().__init__()
+        self.total_loss = 0
+        self.total_steps = 0
+
+    def __call__(self, model, output_path, dataloader, epoch, steps):
+        # This method needs to be implemented for SentenceEvaluator, but we won't use it here.
+        pass
+
+    def on_train_batch_end(self, model, score, batch_loss, batch_no, dataloader, steps_total, steps_current, **kwargs):
+        self.total_loss += batch_loss
+        self.total_steps += 1
+
+    def on_epoch_end(self, model, score, epoch, steps_total, **kwargs):
+        avg_loss = self.total_loss / self.total_steps if self.total_steps > 0 else 0
+        logging.info(f"Epoch {epoch} ended with average loss: {avg_loss:.4f}")
+        # Reset for the next epoch
+        self.total_loss = 0
+        self.total_steps = 0
 
