@@ -35,3 +35,57 @@ model.fit(train_objectives=[(train_dataloader, train_loss)],
           warmup_steps=100,
           output_path=os.path.join('output', 'training_example'),
           callback=callback)
+
+
+
+
+from sentence_transformers.evaluation import SentenceEvaluator
+import logging
+
+class EpochLossLoggingCallback(SentenceEvaluator):
+    def __init__(self):
+        self.total_loss = 0
+        self.total_steps = 0
+
+    def on_train_batch_end(self, model, score, batch_loss, batch_no, dataloader, steps_total, steps_current, **kwargs):
+        self.total_loss += batch_loss
+        self.total_steps += 1
+
+    def on_epoch_end(self, model, score, epoch, steps_total, **kwargs):
+        avg_loss = self.total_loss / self.total_steps
+        logging.info(f"Epoch {epoch} ended with average loss: {avg_loss}")
+        # Reset for the next epoch
+        self.total_loss = 0
+        self.total_steps = 0
+
+from sentence_transformers.evaluation import EmbeddingSimilarityEvaluator
+
+# Define your custom sentences and labels
+sentences1 = ["Your first sentence.", "Your second sentence."]
+sentences2 = ["Your first sentence's pair.", "Your second sentence's pair."]
+labels = [0.9, 0.75]  # Similarity scores for each pair
+
+# Initialize the evaluator
+similarity_evaluator = EmbeddingSimilarityEvaluator(sentences1, sentences2, labels)
+
+from sentence_transformers import SentenceTransformer
+
+# Load your model
+model = SentenceTransformer('bert-base-uncased')
+
+# Assume train_dataloader and train_loss are already defined
+
+# Instantiate the logging callback
+epoch_loss_logger = EpochLossLoggingCallback()
+
+# Fit the model
+model.fit(
+    train_objectives=[(train_dataloader, train_loss)],
+    epochs=4,
+    evaluators=[epoch_loss_logger, similarity_evaluator],  # Add your callbacks and evaluators here
+    evaluation_steps=1000,  # Adjust based on your dataset size and desired logging frequency
+    # Additional training arguments...
+)
+
+
+
