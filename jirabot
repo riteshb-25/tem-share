@@ -7,7 +7,24 @@ The core of this project lies in its ability to transform conventional JIRA issu
 
 Upon resolving an issue, the bots generate the necessary output files, which are then seamlessly deployed to Heroku for hosting. This end-to-end automation not only significantly reduces the turnaround time for issue resolution but also ensures consistency and quality in the solutions provided. The Agile Bot Orchestrator embodies the next leap in agile project management and software development, promising a future where bots and humans collaborate more closely for faster, more efficient outcomes.
 
+more titles:
+IRA Bot Sprint: Agile Solutions with GPT-4
+BDD Bot Forge: Agile JIRA Issue Automation
+Gherkin Bot Workshop: From JIRA to Heroku
+JIRA Harmony: GPT-4 Bots in Agile Symphonies
+Agile Innovator: BDD-Driven JIRA Bot Ecosystem
+Issue Navigator: GPT-4’s Agile JIRA Odyssey
+Scenario Synthesizer: Agile Bots Transforming JIRA
+JIRA Bot Conductor: Orchestrating Agile GPT-4 Solutions
+Agile Bot Ensemble: Collaborative JIRA Solutions with GPT-4
+JIRA Bot Symphony: Crafting Agile Gherkin Narratives
 
 
 
-Other title samples:
+Once a requirement is updated on the UI the jiras will be created and then each jira issue will trigger a webhook to run a flask app which will pick all the information from the jira issue and
+generate gherkin scenarios to be then executed to solve the requirement. These scenarios will be executed with our speciallly tune gpt4 agents who are in an advanced and controlled room which 
+will solve the issues and create and push the code to git repo. this code will be then with assistance of...
+An OpenAI function in the B&W autogen chat designed to manage Git operations with assistance from Aider.
+A GitHub Actions setup that automatically triggers a pipeline for continuous integration and deployment.
+Integration of a language server parser (LSP) to enhance code editing and debugging capabilities.
+Implementation of the Pytree-sitter library from Aider for efficient syntax parsing in Python projects.
