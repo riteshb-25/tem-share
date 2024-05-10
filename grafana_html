@@ -95,3 +95,64 @@
 
 
 ----------------
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Azure SRE Landing Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0; /* Set background color */
+      background-image: url('background_image.jpg'); /* Set background image */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+    .dashboard-icon {
+      margin: 20px;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Drop shadow */
+      text-align: center;
+    }
+    .dashboard-icon img {
+      width: 100px; /* Adjust size of vector image */
+      height: 100px;
+      margin-bottom: 10px;
+    }
+    .dashboard-icon button {
+      border: none;
+      background: none;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="dashboard-icon">
+      <img src="dashboard_icon_1.svg" alt="Dashboard Icon 1">
+      <button onclick="window.location.href='dashboard_url_1';">Dashboard 1</button>
+    </div>
+    <div class="dashboard-icon">
+      <img src="dashboard_icon_2.svg" alt="Dashboard Icon 2">
+      <button onclick="window.location.href='dashboard_url_2';">Dashboard 2</button>
+    </div>
+    <!-- Add more dashboard icons as needed -->
+  </div>
+</body>
+</html>
