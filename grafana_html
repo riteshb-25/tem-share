@@ -225,3 +225,213 @@
 </body>
 </html>
 
+
+
+
+----------------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACE SRE Team Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #303030;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 0 0 10px 10px;
+        }
+        nav {
+            background-color: #fff;
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+            margin: 20px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border: 2px solid #303030;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .dashboard {
+            margin-bottom: 40px;
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 2px solid #303030;
+        }
+        .dashboard img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .dashboard .description {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            text-align: center;
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            border: 2px solid #303030;
+            background-color: #61eaff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: all 0.3s;
+            margin: 0 10px;
+            font-weight: 700;
+            cursor: pointer;
+            position: relative;
+        }
+        .button sup {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: #303030;
+            color: #fff;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+        }
+        .button img {
+            max-width: 30px;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 5px;
+        }
+        .button:hover {
+            background-color: #ff5757;
+            border-color: #ff5757;
+        }
+        .button.active {
+            background-color: #ff6f61;
+            border-color: #303030;
+        }
+        .dashboard-links {
+            display: none;
+            margin-top: 20px;
+        }
+        .dashboard-links.active {
+            display: block;
+        }
+        .dashboard-links button {
+            display: block;
+            margin: 10px auto;
+            padding: 12px 24px;
+            border: 2px solid #303030;
+            background-color: #3b5998;
+            color: #fff;
+            border-radius: 30px;
+            font-weight: 700;
+            transition: all 0.3s;
+            width: 80%;
+            cursor: pointer;
+            position: relative;
+        }
+        .dashboard-links button:hover {
+            background-color: #2a3f7f;
+            border-color: #2a3f7f;
+        }
+        .dashboard-links button.active {
+            background-color: #303030;
+            border-color: #303030;
+        }
+        footer {
+            background-color: #303030;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px 10px 0 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to ACE SRE Team Observability Dashboard</h1>
+    </header>
+    <nav id="navButtons">
+        <button id="btnDashboard1" class="button active" onclick="toggleDashboardLinks('dashboard1', 'btnDashboard1')">
+            <img src="https://via.placeholder.com/30" alt="Dashboard 1">
+            Dashboard 1
+            <sup>1</sup>
+        </button>
+        <button id="btnDashboard2" class="button" onclick="toggleDashboardLinks('dashboard2', 'btnDashboard2')">
+          <img src="https://via.placeholder.com/30" alt="Dashboard 2">
+          Dashboard 2
+          <sup>2</sup>
+      </button>
+        <div id="dashboard1Links" class="dashboard-links active">
+            <button class="button" onclick="openDashboard('dashboard1_link1')">Dashboard 1 Link 1</button>
+            <button class="button" onclick="openDashboard('dashboard1_link2')">Dashboard 1 Link 2</button>
+            <button class="button" onclick="openDashboard('dashboard1_link3')">Dashboard 1 Link 3</button>
+            <button class="button" onclick="openDashboard('dashboard1_link4')">Dashboard 1 Link 4</button>
+            <button class="button" onclick="openDashboard('dashboard1_link5')">Dashboard 1 Link 5</button>
+        </div>
+      <div id="dashboard2Links" class="dashboard-links">
+          <button class="button" onclick="openDashboard('dashboard2_link1')">Dashboard 2 Link 1</button>
+          <button class="button" onclick="openDashboard('dashboard2_link2')">Dashboard 2 Link 2</button>
+          <button class="button" onclick="openDashboard('dashboard2_link3')">Dashboard 2 Link 3</button>
+          <button class="button" onclick="openDashboard('dashboard2_link4')">Dashboard 2 Link 4</button>
+          <button class="button" onclick="openDashboard('dashboard2_link5')">Dashboard 2 Link 5</button>
+      </div>
+    </nav>
+    <footer>
+        <p>© 2024 ACE SRE Team. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleDashboardLinks(dashboardId, buttonId) {
+            var dashboardLinks = document.getElementById(dashboardId + "Links");
+            dashboardLinks.classList.add("active");
+            var allDashboardLinks = document.querySelectorAll(".dashboard-links");
+            allDashboardLinks.forEach(function(link) {
+                if (link.id !== dashboardId + "Links" && link.classList.contains("active")) {
+                    link.classList.remove("active");
+                }
+            });
+            var allButtons = document.querySelectorAll(".button");
+            allButtons.forEach(function(button) {
+                if (button.id !== buttonId && button.classList.contains("active")) {
+                    button.classList.remove("active");
+                }
+            });
+            var clickedButton = document.getElementById(buttonId);
+            clickedButton.classList.add("active");
+        }
+
+        function openDashboard(linkId) {
+            var url = ""; // Add the URL of the dashboard here
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
+
+
