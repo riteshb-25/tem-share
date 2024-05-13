@@ -1,0 +1,15 @@
+Description:
+
+We are implementing a new storage account in Azure to facilitate secure and scalable storage for our organization's data assets. This storage account will enhance our ability to store, manage, and access data across various applications and services within our Azure environment.
+
+Implementation Plan:
+
+Define storage account requirements.
+Configure account in Azure Portal.
+Set access controls and security.
+Validate functionality and document setup.
+
+
+Operation Value:
+
+Microsoft.Storage/storageAccounts/create
