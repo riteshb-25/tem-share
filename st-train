@@ -112,3 +112,37 @@ class EpochLossLoggingCallback(SentenceEvaluator):
         self.total_loss = 0
         self.total_steps = 0
 
+
+
+
+
+
+
+-----------
+import random
+
+def generate_unique_pairs(num_pairs, range_min, range_max):
+    pairs = set()
+    while len(pairs) < num_pairs:
+        x = random.randint(range_min, range_max)
+        y = random.randint(range_min, range_max)
+        if x != y:
+            pairs.add((x, y))
+    return list(pairs)
+
+# Parameters
+num_pairs = 40000
+range_min = 0
+range_max = 9000
+
+# Generate the pairs
+unique_pairs = generate_unique_pairs(num_pairs, range_min, range_max)
+
+# Optionally print the pairs to verify
+for pair in unique_pairs[:10]:  # print first 10 pairs to verify
+    print(pair)
+
+# Verify the length
+print("Total pairs generated:", len(unique_pairs))
+
+
