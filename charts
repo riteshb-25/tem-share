@@ -1,0 +1,43 @@
+import matplotlib.pyplot as plt
+import seaborn as sns
+import pandas as pd
+
+# Example lists
+operation_values = ['Operation A', 'Operation B', 'Operation C', 'Operation D']
+definitions = ['Definition A', 'Definition B', 'Definition C', 'Definition D']
+similarity_scores = [0.8, 0.6, 0.9, 0.7]
+
+# Create a DataFrame
+data = pd.DataFrame({
+    'Operation': operation_values,
+    'Definition': definitions,
+    'Similarity Score': similarity_scores
+})
+
+# Bar Chart
+plt.figure(figsize=(10, 6))
+sns.barplot(x='Operation', y='Similarity Score', data=data)
+plt.title('Similarity Scores of Operations')
+plt.xlabel('Operation')
+plt.ylabel('Similarity Score')
+plt.ylim(0, 1)  # Assuming similarity scores range from 0 to 1
+plt.show()
+
+# Heatmap
+# Create a similarity matrix for demonstration
+similarity_matrix = pd.DataFrame({
+    'Operation A': [1, 0.8, 0.5, 0.3],
+    'Operation B': [0.8, 1, 0.6, 0.4],
+    'Operation C': [0.5, 0.6, 1, 0.7],
+    'Operation D': [0.3, 0.4, 0.7, 1]
+}, index=['Operation A', 'Operation B', 'Operation C', 'Operation D'])
+
+plt.figure(figsize=(8, 6))
+sns.heatmap(similarity_matrix, annot=True, cmap='coolwarm', vmin=0, vmax=1)
+plt.title('Similarity Matrix of Operations')
+plt.show()
+
+
+  ---------
+
+  
