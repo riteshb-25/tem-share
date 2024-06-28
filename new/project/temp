@@ -1,0 +1,22 @@
+{
+  "name": "todo-app",
+  "version": "1.0.0",
+  "description": "A simple Todo Application.",
+  "scripts": {
+    "start": "node script.js",
+    "test": "jest --coverage",
+    "test:coverage": "jest --coverage"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageDirectory": "coverage"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3",
+    "jest-environment-jsdom": "^26.6.0"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "serve": "^14.2.2"
+  }
+}
