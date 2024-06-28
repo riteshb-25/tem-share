@@ -28,3 +28,37 @@ try:
     print(f"Localhost link: {link}")
 except Exception as e:
     print(f"Error: {e}")
+
+
+
+
+import signal
+
+class TimeoutException(Exception):
+    pass
+
+def timeout_handler(signum, frame):
+    raise TimeoutException
+
+def function_to_run():
+    # Your function logic here
+    while True:
+        print("Running...")
+        time.sleep(1)  # Simulating long-running process
+
+def run_with_timeout(func, timeout):
+    signal.signal(signal.SIGALRM, timeout_handler)
+    signal.alarm(timeout)
+    
+    try:
+        func()
+    except TimeoutException:
+        print("Function execution stopped after timeout.")
+    finally:
+        signal.alarm(0)  # Disable the alarm
+
+if __name__ == "__main__":
+    import time
+
+    # Run the function with a timeout of 120 seconds
+    run_with_timeout(function_to_run, 120)
