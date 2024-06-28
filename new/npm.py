@@ -61,4 +61,47 @@ if __name__ == "__main__":
     import time
 
     # Run the function with a timeout of 120 seconds
-    run_with_timeout(function_to_run, 120)
+    run_with_timeout(function_to_run, 120
+
+
+
+
+
+
+import threading
+import time
+
+def function_to_run():
+    # Simulating a long-running process (5 minutes)
+    for i in range(300):  # 300 seconds (5 minutes)
+        print(f"Running... {i+1} seconds")
+        time.sleep(1)  # Sleep for 1 second each iteration
+
+def run_with_timeout(func, timeout):
+    def wrapper():
+        try:
+            func()
+        except Exception as e:
+            print(f"Function stopped with exception: {e}")
+
+    # Start the function in a separate thread
+    thread = threading.Thread(target=wrapper)
+    thread.start()
+
+    # Wait for the specified timeout
+    thread.join(timeout)
+
+    if thread.is_alive():
+        print("Function execution stopped after timeout.")
+        # Thread is still running, need to stop it
+        # Threads cannot be forcefully killed in Python
+        # Therefore, you might need to structure your function to periodically check for an exit condition
+        raise TimeoutException("Function execution stopped after timeout.")
+
+class TimeoutException(Exception):
+    pass
+
+if __name__ == "__main__":
+    # Run the function with a timeout of 20 seconds
+    run_with_timeout(function_to_run, 20)
+
